@@ -1,0 +1,174 @@
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0px;
+    background-color: #f4f4f4;
+    color: #333;
+    display: flex;
+    flex-direction: column;
+}
+
+
+
+header {
+    background: #333;
+    color: #fff;
+    padding: 1rem 0;
+    text-align: center;
+}
+
+header h1 {
+    margin: 0;
+}
+
+.menu {
+    background: #444;
+    padding: 0.5rem 0;
+}
+
+.menu ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    text-align: center;
+}
+
+.menu ul li {
+    display: inline;
+    margin-right: 20px;
+}
+
+.menu ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1.1em;
+}
+
+.menu ul li a:hover {
+    text-decoration: underline;
+}
+
+main {
+    flex-grow: 1; 
+    padding: 20px;
+    width: 90%;
+    max-width: 1000px; 
+    margin: 20px auto;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    border-radius: 8px;
+}
+
+
+#addTask {
+    background: #fff;
+    padding: 25px;
+    margin-bottom: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    display: flex;
+    flex-direction: column;
+
+}
+
+#addTask h2 {
+    color: #333;
+    border-bottom: 2px solid #eee;
+    padding-bottom: 10px;
+    margin-top: 0;
+}
+
+#addTask label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+}
+
+#addTask input[type="text"]{
+    width: calc(100% - 24px); 
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+#addButton input[type="button"] {
+    display: inline-block;
+    background-color: #007bff; 
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+}
+
+#addButton input[type="button"]:hover {
+    background-color: #0056b3;
+}
+
+
+
+.checkbox-list {
+  list-style: none; 
+  padding-left: 0; 
+  margin-bottom: 10px;
+}
+
+.checkbox-list input[type="checkbox"] {
+  /* Oculta la casilla de verificación nativa */
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+
+.checkbox-list li {
+    display: block;
+    position: relative;
+    padding-left: 35px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+
+/* Crea el aspecto de la casilla de verificación */
+.checkbox-list li::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 25px;
+  height: 25px;
+  background-color: #eee;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+/* Estilo cuando la casilla está marcada */
+.checkbox-list input[type="checkbox"]:checked + li::before {
+  background-color: #2196F3;
+  border-color: #2196F3;
+}
+
+/* Crea la marca de verificación */
+.checkbox-list li::after {
+  content: "";
+  position: absolute;
+  display: none;
+  left: 9px;
+  top: 5px;
+  width: 5px;
+  height: 10px;
+  border: solid white;
+  border-width: 0 3px 3px 0;
+  transform: rotate(45deg);
+}
+
+.checkbox-list input[type="checkbox"]:checked + li::after {
+  display: block;
+}

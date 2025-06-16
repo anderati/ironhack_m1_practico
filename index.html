@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TT</title>
+    <title>Task Tracker</title> <!-- Changed title -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <header>
+        <h1>Task Tracker</h1>
+    </header>
+
+    <nav class="menu" id="nav">
+        <ul>
+            <li><a href="index.html">Inicio</a></li> 
+            <li><a href="about.html">Acerca de</a></li>
+            <li><a href="howto.html">¿Cómo usar?</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <section id="addTask">
+            <h2>Añade tus tareas pendientes:</h2>
+            <form id="taskForm" autocomplete="off">
+            <div>
+                <label for="newTaskTitle">Tarea</label>
+                <input id="newTaskTitle" name="taskTitle" placeholder="Ej.: Hacer la colada" type="text" autofocus required>
+            </div>
+
+            <div>
+                <label for="newTaskDescription">Descripción</label>
+                <textarea id="newTaskDescription" name="taskDescription" placeholder="Introduce aquí la descripción de tu tarea (opcional)" cols="60" rows="5"></textarea>
+            </div>
+
+            <div id="addButtonContainer">
+                <button type="submit">Añadir Tarea</button>
+            </div>
+            
+            </form>
+        </section>
+
+        <section id="tasksContainer">
+            <div id="pendingTasks">
+                <h2>Tareas pendientes</h2> 
+                <ul id="pendingTasksList" class="task-list"> 
+                </ul>
+            </div>
+
+            <div id="completedTasks">
+                <h2>Tareas completadas</h2>
+                <ul id="completedTasksList" class="task-list">
+                </ul>
+            </div>
+        </section>
+    </main>
+    <footer>
+
+        <p>&copy; 2024 Task Tracker</p>
+    </footer>
+<script src="scripts/script.js"></script>
+</body>
+
